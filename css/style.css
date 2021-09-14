@@ -41,8 +41,8 @@
 #headerImgs img{
     position: relative;
     bottom: 190px;
-    height: 720px;
-    width: 100%;
+    height: 41em;
+    width: 100% ;
     object-fit: cover;
     z-index: -2;
 }
