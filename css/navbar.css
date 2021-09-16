@@ -20,6 +20,8 @@ body{
     font-family: 'Public Sans', sans-serif;
     font-size: 18px;
     margin: auto;
+    line-height: 1.5;
+    overflow-x: hidden;
 
 }
 
@@ -43,14 +45,17 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 65px;
+    height: 78px;
     padding: 14px;
-    z-index: 1;
+    position: relative;
+    z-index: 3;
 }
 
 #menu{
     opacity: 0;
     top: 0;
+    
+    
 }
 
 #menu.active{
@@ -67,6 +72,7 @@ section{
     padding: 15px;
     opacity: 1;
     transition: height 100ms linear, opacity 300ms linear ;
+    z-index: 100;
 }
 
 #menu li{
@@ -127,9 +133,8 @@ section{
 #footer{
     background-color: var(--darkBlue);
     padding: 35px;
-    
     color: var(--white);
-    font-size: .75em;
+    font-size: .85em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -186,5 +191,24 @@ section{
 
 .attribution a:hover{
     border-bottom: dotted white 3px;
+    
+}
+
+@media (min-width:769px) {
+    #footer{
+        height: 215px;
+        gap: 30px;
+        justify-content: space-between;
+        align-items:flex-start;
+        text-align: left;
+    }
+
+    .footerDiv{
+        padding: 10px;
+    }
+
+    #links{
+        height: 100px;
+    }
     
 }

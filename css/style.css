@@ -28,23 +28,29 @@
 }
 
 #headerImgs{
-    background: url(../images/bg-intro-mobile.svg);
-    background-size: cover;
-    background-position: top right;
     height: 485px;
     width: 100%;
-    z-index: -1;
-   
+
      
 }
 
 #headerImgs img{
     position: relative;
-    bottom: 190px;
+    bottom: 100px;
     height: 41em;
     width: 100% ;
     object-fit: cover;
+    z-index: 0;
+}
+
+#headerImgs svg{
+    position: relative;
+    width: 70.6em;
+    height: 52em;
+    right: 300px;
+    bottom: 60em;
     z-index: -2;
+
 }
 
 #headerText{
@@ -54,7 +60,8 @@
     gap: 10px;
     width: 100%;
     padding: 20px;
-    margin-top: 70px;
+    margin-top: 140px;
+    align-items: center;
     
 }
 
@@ -78,7 +85,7 @@
     padding:14px;
     width: 160px;
     background:linear-gradient(to right, var(--limeGreen),var(--brightCyan));
-    align-self: center;
+    
     
 
 }
@@ -98,6 +105,7 @@
     gap: 50px;
     background-color:var(--lightblue);
     
+    
 }
 
 #benefitsTitle h2{
@@ -116,7 +124,7 @@
     align-items: center;
     gap: 30px;
     color: var(--grayBlue);
-    padding: 12px;
+    padding: 8px;
     
 }
 
@@ -132,6 +140,7 @@
     padding: 5px;
     font-size: .8em;
     color: var(--grayBlue);
+    margin-bottom: 5em;
     
 }
 
@@ -172,6 +181,91 @@
     padding: 25px;
     justify-content: flex-start;
     text-align: left;
+}
+
+@media (min-width:769px){
+
+    #header{
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        padding: 35px;
+        margin-bottom: 5em;
+    }
+    #headerImgs{
+        
+        width: 10%;
+        
+    }
+
+    #headerImgs img{
+        width: fit-content;
+        height: 48em;
+        left: 10em;
+        object-fit: cover;
+        
+        
+   
+    }
+
+    #headerImgs svg{
+        width: fit-content;
+        height: fit-content;
+        left: 1.9em;
+        bottom: 64em;
+        
+     
+    
+    }
+
+    #headerText{
+        width: 55%;
+        text-align:left;
+        align-items: flex-start;
+        padding: 25px;
+
+    }
+
+    .button{
+        text-align: center;
+    }
+
+
+    #benefitsSection{
+        flex-direction: row;
+        justify-content: flex-start;
+
+    }
+
+    #benefitsTitle{
+        width: 60%;
+    }
+    
+    
+    .benefits{
+        width: 46%;
+        font-size: 1.05em;
+        align-items: flex-start;
+        text-align: left;
+        padding: 1%;
+        line-height: normal;
+    }
+
+    #latestArticlesSection{
+        justify-content: center;
+    }
+
+    .articles-title{
+        display: block;
+        text-align: left;
+        width: 95%;
+    }
+    
+
+    .latestArticles{
+        width: 45%;
+        
+    }
+
 }
 
 
