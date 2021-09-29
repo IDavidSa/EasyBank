@@ -11,17 +11,23 @@
     --white: hsl(0, 0%, 100%);
 }
 
+
+
 *{ 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     font-family: 'Public Sans', sans-serif;
     font-size: 18px;
     margin: auto;
     line-height: 1.5;
     overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    
 
 }
 
@@ -37,6 +43,7 @@ h1, h2, h3{
 
 section{
     margin-top: 65px;
+    box-sizing: border-box;
 }
 
 
@@ -48,7 +55,9 @@ section{
     height: 78px;
     padding: 14px;
     position: relative;
-    z-index: 3;
+    z-index: 4;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #menu{
@@ -88,6 +97,10 @@ section{
     padding-bottom: 7px;
     border-bottom: solid 4px var(--limeGreen);
 
+}
+
+#nav-button{
+    display: none;
 }
 
 #btnMobile{
@@ -194,7 +207,7 @@ section{
     
 }
 
-@media (min-width:769px) {
+@media screen and (min-width:768px) and (max-width:1268px){
     #footer{
         height: 215px;
         gap: 30px;
@@ -209,6 +222,59 @@ section{
 
     #links{
         height: 100px;
+    }
+    
+}
+
+@media screen and (min-width:1269px) {
+
+    #navbar{
+        justify-content: space-evenly;
+    }
+    
+    #btnMobile{
+        display:none
+    }
+
+    #menu{
+        opacity: 1;
+        display: flex;
+        flex-direction: row;
+        background-color: var(--white);
+        text-align: center;
+        list-style: none;
+        position: static;
+        padding: 15px;
+        transition:opacity 300ms linear ;
+        z-index: 100;
+        gap: 5px;
+        
+        
+        
+    }
+
+    #menu li{
+        padding: 12px;
+        font-size:.9em;
+        color: var(--grayBlue);
+        
+        
+    }
+
+    #menu a{
+        box-sizing: border-box;
+        padding: 8px;
+    }
+
+    #menu a:hover{
+        color: black;
+        padding-bottom: 27px;
+        border-bottom: solid 4px var(--limeGreen);
+    
+    }
+
+    #nav-button{
+        display: block;
     }
     
 }

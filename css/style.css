@@ -24,32 +24,37 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
     
 }
 
 #headerImgs{
-    height: 485px;
+    height: 28.7em;
     width: 100%;
+    box-sizing: border-box;
 
      
 }
 
 #headerImgs img{
     position: relative;
-    bottom: 100px;
-    height: 41em;
-    width: 100% ;
+    bottom: 5.5em;
+    height: 37em;
+    width: 31em;
     object-fit: cover;
-    z-index: 0;
+    z-index: 3;
+    box-sizing: border-box;
+    
 }
 
 #headerImgs svg{
     position: relative;
-    width: 70.6em;
-    height: 52em;
+    width: 52.5em;
+    height: 50.5em;
     right: 300px;
     bottom: 60em;
-    z-index: -2;
+    z-index: 0;
+    box-sizing: border-box;
 
 }
 
@@ -62,6 +67,8 @@
     padding: 20px;
     margin-top: 140px;
     align-items: center;
+    position: relative;
+    z-index: 1;
     
 }
 
@@ -81,8 +88,8 @@
 .button{
     color: var(--white);
     border-radius: 28px;
-    font-size: 14px;
-    padding:14px;
+    font-size: .85em;
+    padding:12px 13px;
     width: 160px;
     background:linear-gradient(to right, var(--limeGreen),var(--brightCyan));
     
@@ -183,24 +190,29 @@
     text-align: left;
 }
 
-@media (min-width:769px){
+@media screen and (min-width:768px){
 
     #header{
         flex-direction: row-reverse;
         justify-content: flex-end;
-        padding: 35px;
-        margin-bottom: 5em;
+        padding: 105px;
+        margin-bottom: 2em;
+        margin: auto;
+        gap: 110px;
+        
     }
     #headerImgs{
-        
-        width: 10%;
+        width: 45%;
+        height: 39.4em;
+        box-sizing: border-box;
         
     }
 
     #headerImgs img{
-        width: fit-content;
-        height: 48em;
-        left: 10em;
+        width: 750px;
+        height: 950px;
+        left: 12.8em;
+        bottom: 175px;
         object-fit: cover;
         
         
@@ -208,22 +220,26 @@
     }
 
     #headerImgs svg{
-        width: fit-content;
-        height: fit-content;
-        left: 1.9em;
-        bottom: 64em;
+        height: 850px;
+        width: 900px;
+        left: 3.8em;
+        bottom: 65.8em;
         
      
     
     }
 
     #headerText{
-        width: 55%;
-        text-align:left;
-        align-items: flex-start;
-        padding: 25px;
-
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        text-align: left;
+        width: 390px;
+        min-width: 390px;
+        bottom: 100px;
+       
     }
+   
 
     .button{
         text-align: center;
@@ -266,6 +282,33 @@
         
     }
 
+}
+
+@media screen and (min-width:1279px) {
+
+  
+    #benefitsTitle{
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-right: 250px;
+        padding: 45px;
+        box-sizing: border-box;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    
+    .benefits{
+        width: 20%;
+        
+    }
+
+    .latestArticles{
+        width: 22%;
+        
+    }
+
+    
 }
 
 
